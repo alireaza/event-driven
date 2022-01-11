@@ -6,6 +6,11 @@ namespace AliReaza\Tests\EventDriven\Unit;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class ListenerProviderTest
+ *
+ * @package AliReaza\Tests\EventDriven\Unit
+ */
 class ListenerProviderTest extends TestCase
 {
     public function test_Coming_Soon()
