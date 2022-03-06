@@ -4,14 +4,9 @@ namespace AliReaza\EventDriven;
 
 use Psr\EventDispatcher\ListenerProviderInterface;
 
-/**
- * Class ListenerProvider
- *
- * @package AliReaza\EventDriven
- */
 class ListenerProvider extends AbstractListenerProvider implements ListenerProviderInterface, EventDrivenListenerInterface
 {
-    public function __construct(private ListenerProviderInterface $provider)
+    public function __construct(public ListenerProviderInterface $provider)
     {
     }
 
@@ -20,12 +15,12 @@ class ListenerProvider extends AbstractListenerProvider implements ListenerProvi
         return $this->provider->getListenersForEvent($event);
     }
 
-    public function subscribe(): void
+    public function subscribe(int $timeout_ms = 0): void
     {
-        $this->provider->subscribe();
+        $this->provider->subscribe($timeout_ms);
     }
 
-    public function unsubscribe($unsubscribe = true): void
+    public function unsubscribe(bool $unsubscribe = true): void
     {
         $this->provider->unsubscribe($unsubscribe);
     }

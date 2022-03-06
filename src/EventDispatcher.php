@@ -4,11 +4,6 @@ namespace AliReaza\EventDriven;
 
 use Psr\EventDispatcher\EventDispatcherInterface;
 
-/**
- * Class EventDispatcher
- *
- * @package AliReaza\EventDriven
- */
 class EventDispatcher implements EventDispatcherInterface, EventDrivenInterface
 {
     public function __construct(private EventDispatcherInterface $dispatcher)

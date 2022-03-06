@@ -2,14 +2,9 @@
 
 namespace AliReaza\EventDriven;
 
-/**
- * Interface EventDrivenListenerInterface
- *
- * @package AliReaza\EventDriven
- */
 interface EventDrivenListenerInterface
 {
-    public function subscribe(): void;
+    public function subscribe(int $timeout_ms = 0): void;
 
-    public function unsubscribe($unsubscribe = true): void;
+    public function unsubscribe(bool $unsubscribe = true): void;
 }

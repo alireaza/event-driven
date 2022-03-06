@@ -2,11 +2,6 @@
 
 namespace AliReaza\EventDriven;
 
-/**
- * Interface EventDrivenInterface
- *
- * @package AliReaza\EventDriven
- */
 interface EventDrivenInterface
 {
     public function getEventId(): string;
